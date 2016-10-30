@@ -1,6 +1,7 @@
 var nodeExternals = require('webpack-node-externals');
+const { merge } = require('lodash')
 
-module.exports = {
+module.exports = merge(base, {
   output: {
     // sourcemap support for IntelliJ/Webstorm
     devtoolModuleFilenameTemplate: '[absolute-resource-path]',
@@ -9,4 +10,4 @@ module.exports = {
   target: 'node', // in order to ignore built-in modules like path, fs, etc. 
   externals: [nodeExternals()], // in order to ignore all modules in node_modules folder 
   devtool: "cheap-module-source-map" // faster than 'source-map' 
-};
+})

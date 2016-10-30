@@ -12,7 +12,9 @@ var <%= name %> = require('<%= name %>');
 
 ### Webpack & Babel
 
-Extra babel plugins for ES2017?
+Uses [babel-preset-latest-minimal](https://github.com/gabmontes/babel-preset-latest-minimal) which determines what plugins are needed for Node.js via feature detection.
+
+Some extra (optional) babel plugins for ES2017:
 
 ```
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -22,6 +24,8 @@ Extra babel plugins for ES2017?
     "babel-plugin-transform-regenerator": "^6.16.1",
     "babel-plugin-transform-runtime": "^6.16.1",
 ```
+
+Try `babel-node-list-required`
 
 ## Documentation
 

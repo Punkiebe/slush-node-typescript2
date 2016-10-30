@@ -15,7 +15,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'es2017'],
+          presets: ['latest-minimal'],
           plugins: [
             'transform-runtime',
             'transform-decorators-legacy',

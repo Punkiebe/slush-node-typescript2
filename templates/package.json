@@ -39,10 +39,11 @@
     "chai": "^3.5.0",
     "del": "^2.2.2",
     "glob": "^7.1.0",
+    "lodash": "^4.16.1",
     <% if (babel) { %>
     "babel-cli": "^6.16.0",
     "babel-polyfill": "^6.16.0",
-    "babel-preset-latest": "^6.16.0"
+    "babel-preset-latest-minimal": "^6.16.0"
     <% } %>
     <% if (nyc) { %>
     "nyc": "^8.4.0",
