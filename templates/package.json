@@ -42,7 +42,7 @@
     <% if (babel) { %>
     "babel-cli": "^6.16.0",
     "babel-polyfill": "^6.16.0",
-    "babel-preset-es2017": "^6.16.0"
+    "babel-preset-latest": "^6.16.0"
     <% } %>
     <% if (nyc) { %>
     "nyc": "^8.4.0",

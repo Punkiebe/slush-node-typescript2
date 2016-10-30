@@ -24,7 +24,12 @@ Extra babel plugins for ES2017?
 ```
 
 ## Documentation
-_(Coming soon)_
+
+- [babel-preset-es2017](https://www.npmjs.com/package/babel-preset-es2017)
+- [useful-babel-presets](http://www.2ality.com/2016/09/three-useful-babel-presets.html)
+- [testing-with-mocha-and-webpack](http://randycoulman.com/blog/2016/03/22/testing-with-mocha-and-webpack/)
+- [mocha-webpack](https://www.npmjs.com/package/mocha-webpack)
+- [nyc](https://github.com/istanbuljs/nyc)
 
 ## Examples
 _(Coming soon)_
