@@ -53,6 +53,14 @@ gulp.task('default', function(done) {
         {type: 'list', name: 'licenseType', message: 'Choose your license type', choices: licenseTypes, default: 'mit'},
 
         {
+          type: 'list',
+          name: 'compiler',
+          message: 'Select compiler',
+          choices: ['typescript', 'babel'],
+          default: 'typescript'
+        },
+
+        {
           type: 'checkbox',
           name: 'taskManagers',
           message: 'Select one or more task managers',
@@ -87,6 +95,13 @@ gulp.task('default', function(done) {
 
         {
           type: 'confirm',
+          name: 'typescript',
+          message: 'Use Typescript',
+          default: true
+        },
+
+        {
+          type: 'confirm',
           name: 'sinon',
           message: 'Use Sinon to mock server',
           default: false
@@ -100,6 +115,47 @@ gulp.task('default', function(done) {
         if (answers.taskManagers.indexOf('gulp') > 0) {
           answers.gulp = true;
         }
+
+        answers.typescript = answers.compiler === 'typescript';
+        answers.babel = answers.compiler === 'babel';
+
+        let webpackExtras = new Promise((resolve, reject) => {
+          if (answers.webpack) {
+            inquirer.prompt([{
+              type: 'confirm',
+              name: 'webpackServer'
+              message: 'Use webpack server',
+              default: false
+            }]).then((answers) {
+              resolve(answers)
+            }).catch((err) {
+              reject(answers)
+            })
+          } else {
+            resolve({});
+          }
+        })
+
+        answers.webpackServer = webpackExtras.webpackServer
+
+        let coverageExtras = new Promise((resolve, reject) => {
+          if (answers.istanbul) {
+            inquirer.prompt([{
+              type: 'confirm',
+              name: 'nyc'
+              message: 'Use nyc for istanbul',
+              default: false
+            }]).then((answers) {
+              resolve(answers)
+            }).catch((err) {
+              reject(answers)
+            })
+          } else {
+            resolve({});
+          }
+        })
+
+        answers.nyc = coverageExtras.nyc
 
         if (!answers.moveon) {
           console.log('Aborting...');

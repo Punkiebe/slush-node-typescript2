@@ -1,5 +1,6 @@
 --colors
 --recursive
+--include helper.js
 --webpack-config webpack.config-test.js
 --require source-map-support/register
-test/**/*_test.js
+test/**/*.test.js

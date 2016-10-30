@@ -10,6 +10,19 @@ var <%= name %> = require('<%= name %>');
 <%= name %>.awesome(); // "awesome"
 ```
 
+### Webpack & Babel
+
+Extra babel plugins for ES2017?
+
+```
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-class-properties": "^6.16.1",
+    "babel-plugin-decorators-legacy": "^6.13.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.16.1",
+    "babel-plugin-transform-runtime": "^6.16.1",
+```
+
 ## Documentation
 _(Coming soon)_
 

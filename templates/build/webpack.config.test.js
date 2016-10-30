@@ -2,7 +2,7 @@ var nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   output: {
-    // sourcemap support for IntelliJ/Webstorm 
+    // sourcemap support for IntelliJ/Webstorm
     devtoolModuleFilenameTemplate: '[absolute-resource-path]',
     devtoolFallbackModuleFilenameTemplate: '[absolute-resource-path]?[hash]'
   },
